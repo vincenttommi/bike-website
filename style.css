@@ -291,4 +291,57 @@ blockquote.left{
   border-left: 5px solid floralwhite;
   font-size:20px;
   
-;}
+}
+
+.container{
+
+  height:60%;
+  color:#00FF00;
+  align-items:center;
+
+}
+
+
+.Hire-bike{
+
+color:#00FF00;
+background-color: black;
+font-family: 'Courier New', Courier, monospace;
+border:5px;
+border-radius:4px;
+
+
+}
+
+
+.container{
+
+  padding:10px ;
+  text-align:center ;
+
+}
+
+.details{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2px;
+}
+
+.card{
+
+  width: 300px;
+  margin:10px;
+  height: auto;
+  box-shadow: 10px 10px 8px 5px rgba(0, 0, 0, 0.2);
+  border-radius:10px;
+  overflow:hidden;
+  color: #101010;
+
+}
+.card img{
+
+  width:400px;
+  height: 200px;
+  border-radius:10px;
+}
+

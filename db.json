@@ -6,9 +6,9 @@
         "Bike_type": "Road bikes",
         "Hiring_Price": "3000",
         "Hired_Bikes": 30,
-        "capacity": 50,
+        "capacity": 100,
         "description": "A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.",
-        "image": "shorturl.at/koY89 "
+        "image": "http://surl.li/gczsc"
       },
       {
         "id": "2",
@@ -16,7 +16,7 @@
         "Bike_type": "Touring bikes",
         "Hiring_Price": "15000",
         "Hired_Bikes": 48,
-        "capacity": 60,
+        "capacity": 200,
         "description": "A family gets lost on the road and stumbles upon a hidden, underground, devil-worshiping cult led by the fearsome Master and his servant Torgo.",
         "image": "http://surl.li/gbqly"
       },
@@ -36,7 +36,7 @@
         "Bike_type": "City/Commuter bikes",
         "Hiring_Price": "4000",
         "Hired_Bikes": 37,
-        "capacity": 80,
+        "capacity": 200,
         "description": "A young man meets a farm girl who is actually a witch.",
         "image": "http://surl.li/gbqwv"
       },
@@ -56,7 +56,7 @@
         "Bike_type": "Electric bikes ",
         "Hiring_Price": "3000",
         "Hired_Bikes": 16,
-        "capacity" : 97,
+        "capacity" : 80,
         "description": "A young man is transformed into a hideous 'moon beast' due to a meteor fragment lodged in his body.",
         "image": "http://surl.li/gbrai"
       }    

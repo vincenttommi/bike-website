@@ -64,7 +64,7 @@ function  validate(){
 
 //fetching
 
-// Select the ul#films element
+// Select the ul#films element hadi chini
 const bikeList = document.querySelector('#bikes');
 
 // Fetch the movie data
@@ -82,23 +82,24 @@ fetch(" http://localhost:3000/bikes")
     });
 
     // Select the .body element
-    const films = document.querySelector('.details');
+    const bikes = document.querySelector('.details');
 
-    // Loop through each bike in the data and create a new card for it
+    
     data.forEach(function (bike) {
       const card = document.createElement('div');
       card.classList.add('card');
+      
       card.innerHTML = `
-        <div class="container">
+        <div class="container ">
           <img src="${bike.image}" alt="Product Image" style="width:50%; height:50%">
           <h1><b>${bike.Bike_type}</b></h1>
           <p>Hiring-price: ${bike.Hiring_Price}</p>
           <p>Time: ${bike.Time}</p>
           <p>Available Bikes: <span class="available-bikes">${bike.capacity - bike.Hired_Bikes}</span></p>
-          <button class="Hire-bike">Hire Bike</button>
+          <button class="Hire-bike">HireBike</button>
         </div>
       `;
-      bike.appendChild(card);
+      bikes.appendChild(card);
 
       // Add a click event listener to the "Hire  Bike" button
       const HireButton = card.querySelector('.Hire-bike');
@@ -137,3 +138,5 @@ fetch(" http://localhost:3000/bikes")
   .catch(function(error) {
     console.log('There was an error fetching the bike data:', error);
   });
+
+  // nko idea wacha tu capture hizi cards kwa css using id
