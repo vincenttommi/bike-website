@@ -1,0 +1,58 @@
+{
+    "bikes": [
+      { "like":"&#9825",
+        "id": "1",
+        "Time": "12.00pm",
+        "Type of Bike": "Road bikes",
+        "Hiring_Price": "3000",
+        "Hired_Bikes": 30,
+        "description": "A giant lizard terrorizes a rural Texas community and a heroic teenager attempts to destroy the creature.",
+        "image": "shorturl.at/koY89 "
+      },
+      {
+        "id": "2",
+        "Time": "2.00pm",
+        "Type of Bike": "Touring bikes",
+        "Hiring_Price": "15000",
+        "Hired_Bikes": 48,
+        "description": "A family gets lost on the road and stumbles upon a hidden, underground, devil-worshiping cult led by the fearsome Master and his servant Torgo.",
+        "image": "http://surl.li/gbqly"
+      },
+      {
+        "id": "3",
+        "Time": "3.00pm",
+        "Type of Bike": "Mountain bikes",
+        "Hiring_Price": "4000",
+        "Hired_Bikes": 33,
+        "description": "An inventor comes up with a time machine, but must prevent its abuse at the hands of an evil C.E.O.",
+        "image": "http://surl.li/gbqtn"
+      },
+      {
+        "id": "4",
+        "Time": "4.00pm",
+        "Type of Bike": "City/Commuter bikes",
+        "Hiring_Price": "4000",
+        "Hired_Bikes": 37,
+        "description": "A young man meets a farm girl who is actually a witch.",
+        "image": "http://surl.li/gbqwv"
+      },
+      {
+        "id": "5",
+        "Time": "7.00am",
+        "Type of Bike": "Hybrid bikes",
+        "Hiring_Price": "1500",
+        "Hired_Bikes": 50,
+        "description": "The Martians kidnap Santa Claus because there is nobody on Mars to give their children presents.",
+        "image": "http://surl.li/gbqxn"
+      },
+      {
+        "id": "6",
+        "Time": "8.30am",
+        "Type of Bike": "Electric bikes ",
+        "Hiring_Price": "3000",
+        "Hired_Bikes": 16,
+        "description": "A young man is transformed into a hideous 'moon beast' due to a meteor fragment lodged in his body.",
+        "image": "http://surl.li/gbrai"
+      }    
+    ]
+  }
