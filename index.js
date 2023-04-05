@@ -60,3 +60,80 @@ function  validate(){
 
 }
 }
+
+
+//fetching
+
+// Select the ul#films element
+const bikeList = document.querySelector('#bikes');
+
+// Fetch the movie data
+fetch(" http://localhost:3000/bikes")
+  .then(function (response) {
+    return response.json();
+  })
+.then(function (data) {
+    // Loop through each bike in the data and add it to the bikeList
+    data.forEach(function (bike) {
+      const listItem = document.createElement('li');
+      listItem.classList.add('bike', 'item');
+      listItem.textContent = bike.Bike_type;
+      bikeList.appendChild(listItem);
+    });
+
+    // Select the .body element
+    const films = document.querySelector('.details');
+
+    // Loop through each bike in the data and create a new card for it
+    data.forEach(function (bike) {
+      const card = document.createElement('div');
+      card.classList.add('card');
+      card.innerHTML = `
+        <div class="container">
+          <img src="${bike.image}" alt="Product Image" style="width:50%; height:50%">
+          <h1><b>${bike.Bike_type}</b></h1>
+          <p>Hiring-price: ${bike.Hiring_Price}</p>
+          <p>Time: ${bike.Time}</p>
+          <p>Available Bikes: <span class="available-bikes">${bike.capacity - bike.Hired_Bikes}</span></p>
+          <button class="Hire-bike">Hire Bike</button>
+        </div>
+      `;
+      bike.appendChild(card);
+
+      // Add a click event listener to the "Hire  Bike" button
+      const HireButton = card.querySelector('.Hire-bike');
+      HireButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the page from reloading
+        // Check if there are any available bikes
+        const availableBikes = card.querySelector('.available-bikes');
+        const numAvailableBikes = parseInt(availableBikes.textContent);
+        if (numAvailableBikes > 0) {
+          // Update the number of available Bikes and display it on the frontend
+          availableBikes.textContent = numAvailableBikes - 1;
+
+          // Update the movie data in the backend
+          const newHired_Bikes = bike.Hired_Bikes + 1;
+          fetch('http://localhost:3000/bikes${bike.id}', {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ Hired_Bikes: newHired_Bikes })
+          })
+            .then(function(response) {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+            })
+            .catch(function(error) {
+              console.error('There was a problem updating the bike data:', error);
+            });
+        } else {
+          alert('Sorry, this showing is hired out!');
+        }
+      });
+    });
+  })
+  .catch(function(error) {
+    console.log('There was an error fetching the bike data:', error);
+  });
