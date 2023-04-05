@@ -29,11 +29,9 @@ setInterval(() => {
 
 //validating form using a function
 function  validate(){
- console.log("name");
+
 
   const form = document.getElementById("#myform");
-
-  //capturing id fo the form
 
 
   const firstname  = document.getElementById("firstname").value;
@@ -46,13 +44,18 @@ function  validate(){
 
 
 
+  if(firstname==""|| lastname =="" || username == "" || city =="" ||estate ==""||zip == ""|| invalidCheck2==""){
+    
+      Swal.fire('oop','validate all the fields','error' );
 
-  if(firstname==""|| lastname =="" || username == "" || city =="" ||estate ==""||zip == ""|| invalidCheck2 ==""){
-
-
-    Swal.fire('oops','all fields are required','error');
 
   }else{
+
+
+  alert("error");
+
+
+
 
 
 }
