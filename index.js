@@ -63,8 +63,6 @@ function  validate(){
 
 
 //fetching
-
-// Select the ul#films element hadi chini
 const bikeList = document.querySelector('#bikes');
 
 // Fetch the movie data
@@ -83,14 +81,10 @@ fetch(" http://localhost:3000/bikes")
 
     // Select the .body element
     const bikes = document.querySelector('.details');
-
-    // i think juu ya hio, test,run
-    // ina addjust, kiac tuu
     data.forEach(function (bike) {
       const card = document.createElement('div');
       card.classList.add('card');
-      // bado kiac  so tuta adjust border radius ama Niaje
-      // add card height
+     
       card.innerHTML = `
         <div class="con">
           <img src="${bike.image}" alt="Product Image" style="width:99.60%; height:60%">
@@ -142,3 +136,55 @@ fetch(" http://localhost:3000/bikes")
   });
 
   // nko idea wacha tu capture hizi cards kwa css using id
+
+
+
+//function that is adding customer details
+
+const form = document.querySelector("#myform");
+
+form.ariaHidden('sumbit',handleSubmit);
+//defining a function that will called when a form is being submitted
+
+function handleSubmit(e){
+  e.preventDefault();
+  //prevent the page to load 
+let DetailsObj = {
+
+  firstname: e.target.firstname.value,
+  lastname:e.target.lastname.value,
+  username:e.target.username.value,
+  city:e.target.city.value,
+  zip:e.target.zip.value,
+  invalidCheck2:e.target.invalidCheck2.value,
+
+
+}
+
+//console log to give outpu
+
+console.log(DetailsObj);
+ addDetailsObj(DetailsObj);
+
+}
+
+
+
+function  addDetailsObj(addDetailsObj){
+
+fetch("http://localhost:3000/details",{
+
+  method : 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(DetailsObj)
+
+})
+
+.then(response => response.jsom())
+
+.then(Details => console.log(Details))
+.catch(error => console.error(error))
+
+}

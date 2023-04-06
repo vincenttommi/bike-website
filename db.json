@@ -59,7 +59,33 @@
         "capacity" : 80,
         "description": "A young man is transformed into a hideous 'moon beast' due to a meteor fragment lodged in his body.",
         "image": "http://surl.li/gbrai"
-      }    
+      } ,  
+    
+      {
+
+        "id": "7",
+        "Time": "9.30am",
+        "Bike_type": "Rural Bikes ",
+        "Hiring_Price": "6000",
+        "Hired_Bikes": 20,
+        "capacity" : 200,
+        "description": "A young man is transformed into a hideous 'moon beast' due to a meteor fragment lodged in his body.",
+        "image": "http://surl.li/gdeav"
+      },
+
+      {
+        "id": "8",
+        "Time": "10.45am",
+        "Bike_type": "Folding Bikes ",
+        "Hiring_Price": "4500",
+        "Hired_Bikes": 30,
+        "capacity" : 400,
+        "description": "A young man is transformed into a hideous 'moon beast' due to a meteor fragment lodged in his body.",
+        "image": "http://surl.li/gdecy"
+
+
+
+      }
     ],
     
     
