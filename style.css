@@ -324,24 +324,90 @@ border-radius:4px;
 .details{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2px;
+  grid-gap: 8px;
+  margin: 0 auto;
 }
 
-.card{
+.con{
 
+  /* nii hii? */
+  /* test Margin sasatucheze nayo */
+  /* space btn cards? yeah
+  reduce ama increase reduce */
+  height:550px;
+  margin: 5px!important;
+  padding:10px;
+  text-align: center;
+  background-color:rgba(16, 16, 16, 0.1);; 
+  
+  /* hii n container */
+  /* hii ingine ni auto so hii ndo constant */
+}
+
+
+/* width ama height niki try kuweka width hai occupy half of the screen?
+card inafaa half of screen ama entire row */
+/* width ndio iko n noma then hio space btn cards */
+.card{
+/* na ukicgange hii heby run*/
+/* ttest */
+/* test */
+/* inashare maybe we reduce the row width size ok */
   width: 300px;
-  margin:10px;
   height: auto;
   box-shadow: 10px 10px 8px 5px rgba(0, 0, 0, 0.2);
   border-radius:10px;
   overflow:hidden;
-  color: #101010;
+  color:black;
 
 }
 .card img{
 
-  width:400px;
-  height: 200px;
+  width: 280px;
+  height: 100px;
+  object-fit: cover;
   border-radius:10px;
+  overflow: hidden;
 }
 
+.card h1{
+
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+  padding: 30px 0;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 20px;
+}
+
+.card p{
+
+  font-size:1.2rem;
+  text-align: center;
+  margin:0;
+  padding: 2px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:bold;
+
+}
+
+
+
+
+
+.Hire-bike{
+
+  
+    background-color: 	#6f6969; /* Set background color */
+    border: none; /* Remove button border */
+    color: white; /* Set text color */
+    padding: 15px 32px; /* Set padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Set display type */
+    font-size: 16px; /* Set font size */
+    margin: 4px 2px; /* Set margin */
+    cursor: pointer; /* Add cursor */
+    border-radius: 10px; /* Set border radius */
+
+}

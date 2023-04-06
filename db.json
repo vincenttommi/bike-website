@@ -60,5 +60,36 @@
         "description": "A young man is transformed into a hideous 'moon beast' due to a meteor fragment lodged in his body.",
         "image": "http://surl.li/gbrai"
       }    
+    ],
+    
+    
+    "details" : [
+
+
+      {
+
+       
+        "id":"1",
+        "Firstname":"vincent",
+         "Lastname":"Tommi",
+         "username":"vincenttomm@gmail.com",
+         "City":"Nairobi",
+         "Estate":"Lions Gate",
+         "zip":"2007"
+
+      },
+      {
+
+      "id":"2",
+      "Firstname":"Daniel",
+      "Lastname":"Karanja",
+      "username":"Danielkaranja@gmail.com",
+      "City":"Nairobi",
+      "Estate":"Ubabini",
+      "zip":"405"
+
+      }
+
     ]
+  
   }

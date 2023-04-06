@@ -84,19 +84,21 @@ fetch(" http://localhost:3000/bikes")
     // Select the .body element
     const bikes = document.querySelector('.details');
 
-    
+    // i think juu ya hio, test,run
+    // ina addjust, kiac tuu
     data.forEach(function (bike) {
       const card = document.createElement('div');
       card.classList.add('card');
-      
+      // bado kiac  so tuta adjust border radius ama Niaje
+      // add card height
       card.innerHTML = `
-        <div class="container ">
-          <img src="${bike.image}" alt="Product Image" style="width:50%; height:50%">
+        <div class="con">
+          <img src="${bike.image}" alt="Product Image" style="width:99.60%; height:60%">
           <h1><b>${bike.Bike_type}</b></h1>
           <p>Hiring-price: ${bike.Hiring_Price}</p>
           <p>Time: ${bike.Time}</p>
           <p>Available Bikes: <span class="available-bikes">${bike.capacity - bike.Hired_Bikes}</span></p>
-          <button class="Hire-bike">HireBike</button>
+          <button class="Hire-bike"  role="button">Hire Bike</button>
         </div>
       `;
       bikes.appendChild(card);
