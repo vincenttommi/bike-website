@@ -142,41 +142,54 @@ fetch(" http://localhost:3000/bikes")
 //function that is adding customer details
 
 // Get the reference to the form and attach an event listener for form submit
-const form = document.getElementById('#myform"');
-form.addEventListener('submit', handleSubmit);
+const form = document.getElementById('#myform"').addEventListener('submit', handleSubmit);
+
 
 // Define the function that will be called when the form is submitted
 function handleSubmit(e) {
   e.preventDefault();
-  let productObj = {
-    firstname: e.target.firstname.value,
-    lastname: e.target.lastname.value,
-    username: e.target.username.value,
-    city: e.target.city.value,
-    estate: e.target.estate.value,
-    zip : e.target.zip.value,
-    invalidCheck2: e.target.invalidCheck2.value,
-       // Fixed typo here, should be price
-  }
+ 
+    const firstname = document.getElementById("firstname").value
+    const lastname = document.getElementById("lastname").value
+    const username = document.getElementById("username").value
+    const city = document.getElementById("city").value
+    const estate  = document.getElementById("estate").value
+    const  zip = document.getElementById("zip").value
 
-  console.log(productObj)
-  addProduct(productObj);
+       // Fixed typo here, should be price
+  
+       fetch(' http://localhost:3000/details', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+        
+          firstname: firstname,
+          lastname: lastname,
+          username: username,
+          city: city,
+          estate: estate,
+          zip: zip
+
+
+
+
+
+
+        })
+      })
+      .then(res => res.json())
+    
+        .then(product => console.log(product))
+        .catch(err => console.error(err)); 
+      
+
 }
 
 
-function addProduct(productObj) {
-  fetch(' http://localhost:3000/details', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(productObj)
-  })
-  .then(res => res.json())
 
-    .then(product => console.log(product))
-    .catch(err => console.error(err)); 
-  }
+  
 
 
 

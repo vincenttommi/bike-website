@@ -107,11 +107,11 @@
       {
 
       "id":"2",
-      "Firstname":"Daniel",
-      "Lastname":"Karanja",
+      "firstname":"Daniel",
+      "lastname":"Karanja",
       "username":"Danielkaranja@gmail.com",
-      "City":"Nairobi",
-      "Estate":"Ubabini",
+      "city":"Nairobi",
+      "estate":"Ubabini",
       "zip":"405"
 
       }
