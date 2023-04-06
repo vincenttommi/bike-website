@@ -141,50 +141,43 @@ fetch(" http://localhost:3000/bikes")
 
 //function that is adding customer details
 
-const form = document.querySelector("#myform");
+// Get the reference to the form and attach an event listener for form submit
+const form = document.querySelector('#myform"');
+form.addEventListener('submit', handleSubmit);
 
-form.addEventListener('sumbit',handleSubmit);
-//defining a function that will called when a form is being submitted
-
-function handleSubmit(e){
+// Define the function that will be called when the form is submitted
+function handleSubmit(e) {
   e.preventDefault();
-  //prevent the page to load 
-let DetailsObj = {
+  let productObj = {
+    firstname: e.target.name.firstname,
+    lastname: e.target.lastname.value,
+    username: e.target.username.value,
+    city: e.target.username.city,
+    estate: e.target.username.estate,
+    zip : e.target.username.zip,
+    invalidCheck2: e.target.username.invalidCheck2,
+       // Fixed typo here, should be price
+  }
 
-  firstname: e.target.firstname.value,
-  lastname:e.target.lastname.value,
-  username:e.target.username.value,
-  city:e.target.city.value,
-  zip:e.target.zip.value,
-  invalidCheck2:e.target.invalidCheck2.value,
-
-
-}
-
-//console log to give outpu
-
-console.log(DetailsObj);
- addDetailsObj(DetailsObj);
-
+  console.log(productObj)
+  addProduct(productObj);
 }
 
 
+function addProduct(productObj) {
+  fetch(' http://localhost:3000/details', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(productObj)
+  })
+  .then(res => res.json())
 
-function  addDetailsObj(addDetailsObj){
+    .then(product => console.log(product))
+    .catch(err => console.error(err)); 
+  }
 
-fetch("http://localhost:3000/details",{
 
-  method : 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(DetailsObj)
 
-})
 
-.then(response => response.jsom())
-
-.then(Details => console.log(Details))
-.catch(error => console.error(error))
-
-}
