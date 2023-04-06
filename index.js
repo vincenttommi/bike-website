@@ -92,7 +92,7 @@ fetch(" http://localhost:3000/bikes")
           <p>Hiring-price: ${bike.Hiring_Price}</p>
           <p>Time: ${bike.Time}</p>
           <p>Available Bikes: <span class="available-bikes">${bike.capacity - bike.Hired_Bikes}</span></p>
-          <button class="Hire-bike"  role="button">Hire Bike</button>
+          <button class="Hire-bike" id="hire"  role="button">Hire Bike</button>
         </div>
       `;
       bikes.appendChild(card);
@@ -143,7 +143,7 @@ fetch(" http://localhost:3000/bikes")
 
 const form = document.querySelector("#myform");
 
-form.ariaHidden('sumbit',handleSubmit);
+form.addEventListener('sumbit',handleSubmit);
 //defining a function that will called when a form is being submitted
 
 function handleSubmit(e){
