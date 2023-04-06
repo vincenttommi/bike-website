@@ -330,29 +330,20 @@ border-radius:4px;
 
 .con{
 
-  /* nii hii? */
-  /* test Margin sasatucheze nayo */
-  /* space btn cards? yeah
-  reduce ama increase reduce */
+  
   height:550px;
   margin: 5px!important;
   padding:10px;
   text-align: center;
   background-color:rgba(16, 16, 16, 0.1);; 
   
-  /* hii n container */
-  /* hii ingine ni auto so hii ndo constant */
+ 
 }
 
 
-/* width ama height niki try kuweka width hai occupy half of the screen?
-card inafaa half of screen ama entire row */
-/* width ndio iko n noma then hio space btn cards */
+
 .card{
-/* na ukicgange hii heby run*/
-/* ttest */
-/* test */
-/* inashare maybe we reduce the row width size ok */
+
   width: 300px;
   height: auto;
   box-shadow: 10px 10px 8px 5px rgba(0, 0, 0, 0.2);
@@ -415,6 +406,40 @@ card inafaa half of screen ama entire row */
 .left{
 
   font-family: 'Montserrat', sans-serif;
-  font-weight:bold;
+  
+}
 
+
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+#bikes{
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  border-right: 0px solid gray;
+  float: left;
+
+}
+
+#bikes li{
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  color: #333;
+  text-transform: capitalize;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#bikes li:hover {
+  background-color:#00FF00;
 }

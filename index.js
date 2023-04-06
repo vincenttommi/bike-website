@@ -142,20 +142,20 @@ fetch(" http://localhost:3000/bikes")
 //function that is adding customer details
 
 // Get the reference to the form and attach an event listener for form submit
-const form = document.querySelector('#myform"');
+const form = document.getElementById('#myform"');
 form.addEventListener('submit', handleSubmit);
 
 // Define the function that will be called when the form is submitted
 function handleSubmit(e) {
   e.preventDefault();
   let productObj = {
-    firstname: e.target.name.firstname,
+    firstname: e.target.firstname.value,
     lastname: e.target.lastname.value,
     username: e.target.username.value,
-    city: e.target.username.city,
-    estate: e.target.username.estate,
-    zip : e.target.username.zip,
-    invalidCheck2: e.target.username.invalidCheck2,
+    city: e.target.city.value,
+    estate: e.target.estate.value,
+    zip : e.target.zip.value,
+    invalidCheck2: e.target.invalidCheck2.value,
        // Fixed typo here, should be price
   }
 
