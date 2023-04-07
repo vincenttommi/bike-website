@@ -142,50 +142,37 @@ fetch(" http://localhost:3000/bikes")
 //function that is adding customer details
 
 // Get the reference to the form and attach an event listener for form submit
-const form = document.getElementById('#myform"').addEventListener('submit', handleSubmit);
-
-
-// Define the function that will be called when the form is submitted
-function handleSubmit(e) {
+const form = document.getElementById('myform').addEventListener('submit', (e) => {
   e.preventDefault();
  
-    const firstname = document.getElementById("firstname").value
-    const lastname = document.getElementById("lastname").value
-    const username = document.getElementById("username").value
-    const city = document.getElementById("city").value
-    const estate  = document.getElementById("estate").value
-    const  zip = document.getElementById("zip").value
+  const firstname = document.getElementById("firstname").value
+  const lastname = document.getElementById("lastname").value
+  const username = document.getElementById("username").value
+  const city = document.getElementById("city").value
+  const estate  = document.getElementById("estate").value
+  const  zip = document.getElementById("zip").value
 
-       // Fixed typo here, should be price
-  
-       fetch(' http://localhost:3000/details', {
+  fetch('http://localhost:4000/details', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-        
           firstname: firstname,
           lastname: lastname,
           username: username,
           city: city,
           estate: estate,
           zip: zip
-
-
-
-
-
-
         })
       })
-      .then(res => res.json())
+      .then(response => response.json())
+      .then(product => console.log(product))
+      .catch(err => console.error(err)); 
     
-        .then(product => console.log(product))
-        .catch(err => console.error(err)); 
-      
+}); 
 
-}
+
 
 
 

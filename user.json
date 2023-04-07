@@ -1,0 +1,16 @@
+{
+
+    "details": [
+         {
+        "id":1,
+        "firstname":"Daniel",
+        "lastname":"Karanja",
+        "username":"Danielkaranja@gmail.com",
+        "city":"Nairobi",
+        "estate":"Ubabini",
+        "zip":"405"
+    }
+    ]
+
+
+}
