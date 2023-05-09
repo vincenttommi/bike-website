@@ -66,7 +66,7 @@ function  validate(){
 const bikeList = document.querySelector('#bikes');
 
 // Fetch the movie data
-fetch(" http://localhost:3000/bikes")
+fetch("https://my-json-server.typicode.com/vincenttommi/bike-website/bikes")
   .then(function (response) {
     return response.json();
   })
@@ -110,7 +110,7 @@ fetch(" http://localhost:3000/bikes")
 
           // Update the movie data in the backend
           const newHired_Bikes = bike.Hired_Bikes + 1;
-          fetch('http://localhost:3000/bikes${bike.id}', {
+          fetch('https://my-json-server.typicode.com/vincenttommi/bike-website/bikes${bike.id}', {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json'
@@ -152,7 +152,7 @@ const form = document.getElementById('myform').addEventListener('submit', (e) =>
   const estate  = document.getElementById("estate").value
   const  zip = document.getElementById("zip").value
 
-  fetch('http://localhost:4000/details', {
+  fetch('http://localhost:3000/details', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
